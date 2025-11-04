@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Politeknik Seberang Perai</title>
+
+  <!-- ===== Part A – Setup ===== -->
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Internal CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f3f6ff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ===== Navigation Bar ===== */
+    .navbar {
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .nav-button {
+      background-color: #e6ecff;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 15px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .nav-button i {
+      color: #0033cc;
+    }
+
+    /* ===== Logo ===== */
+    .logo {
+      margin: 30px 0 10px 0;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 200px;
+      display: none; /* for jQuery fadeIn effect */
+    }
+
+    /* ===== Contact Info ===== */
+    .contact-info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: left;
+      max-width: 600px;
+      width: 90%;
+      line-height: 1.6;
+    }
+
+    .contact-info h2 {
+      text-align: center;
+      color: #0033cc;
+      margin-bottom: 10px;
+    }
+
+    .contact-info a {
+      color: #0066ff;
+      text-decoration: none;
+    }
+
+    address {
+      font-style: normal;
+      margin-top: 10px;
+    }
+
+    /* ===== Social Buttons ===== */
+    .socials {
+      margin: 25px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px 15px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .social-btn i {
+      color: #0033cc;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Part B – Page Design ===== -->
+  <div class="navbar">
+    <button class="nav-button"><i class="fa-solid fa-circle-info"></i> About Us</button>
+    <button class="nav-button"><i class="fa-solid fa-briefcase"></i> Our Services</button>
+    <button class="nav-button"><i class="fa-solid fa-file-signature"></i> Registration Form</button>
+    <button class="nav-button"><i class="fa-solid fa-envelope"></i> Contact Us</button>
+  </div>
+
+  <div class="logo">
+    <img src="poli.jpeg" alt="Politeknik Seberang Perai Logo">
+  </div>
+
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p><strong>WhatsApp:</strong> <a href="#">Send a WhatsApp message</a></p>
+    <p><strong>Call:</strong> +60 12-345 6789</p>
+    <p><strong>Email:</strong> student@psp.edu.my</p>
+    <address>
+      Politeknik Seberang Perai<br>
+      Jalan Permatang Pauh,<br>
+      13500 Permatang Pauh, Pulau Pinang, Malaysia
+    </address>
+  </div>
+
+  <div class="socials">
+    <button class="social-btn"><i class="fa-brands fa-facebook-f"></i> Add Us on Facebook</button>
+    <button class="social-btn"><i class="fa-brands fa-x-twitter"></i> Add Us on Twitter</button>
+    <button class="social-btn"><i class="fa-brands fa-instagram"></i> Add Us on Instagram</button>
+  </div>
+
+  <footer>
+    © Politeknik Seberang Perai
+  </footer>
+
+  <!-- ===== Part C – Apply jQuery Interaction ===== -->
+  <script>
+    $(document).ready(function(){
+
+      // Animate logo when page loads
+      $(".logo img").fadeIn(2000);
+
+      // Hover effect for navigation buttons
+      $(".nav-button").hover(
+        function(){
+          $(this).css("background-color", "#cdd9ff");
+        },
+        function(){
+          $(this).css("background-color", "#e6ecff");
+        }
+      );
+
+      // Animate social media icons when hovered
+      $(".social-btn").hover(
+        function(){
+          $(this).css("transform", "scale(1.1)");
+        },
+        function(){
+          $(this).css("transform", "scale(1)");
+        }
+      );
+    });
+  </script>
+
+  <!-- ===== Part D – Reflection ===== -->
+  <section style="max-width:700px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 3px 8px rgba(0,0,0,0.1);margin:30px;">
+    <h2 style="color:#0033cc;text-align:center;">Reflection</h2>
+    <p><strong>1. What did you learn about using jQuery in this task?</strong><br>
+      I learned how to use jQuery to add simple animations and interactive effects that make a web page more interesting and user-friendly.
+    </p>
+    <br>
+    <p><strong>2. Which jQuery function or method did you find most useful?</strong><br>
+      The most useful jQuery method I found is <code>fadeIn()</code> because it helps create smooth animation effects when displaying elements.
+    </p>
+    <br>
+    <p><strong>3. How could you apply this technique to enhance a real website?</strong><br>
+      I can apply this technique to improve the user experience on real websites by making content appear dynamically and creating engaging interfaces.
+    </p>
+  </section>
+
+</body>
+</html>
+
